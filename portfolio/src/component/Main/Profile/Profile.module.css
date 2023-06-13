@@ -1,0 +1,41 @@
+.profile{
+  font-family: "bitsCoreINSPIRE";
+  width: 100%;
+  height: 60vh;
+  background:white;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items:center;
+  color:black;
+  text-align: start;
+  border-radius: 20px;
+}
+
+.profile h1{
+  text-shadow: 2px 2px 2px gray;
+}
+
+.intro{
+  /* height: 30vh; */
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro1{
+  margin-right: 200px;
+}
+.intro2{
+  margin-left: 200px;
+}
+.profileKey{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  /* padding: 40px; */
+
+}

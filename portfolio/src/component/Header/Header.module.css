@@ -1,0 +1,53 @@
+.blackNav{
+  font-family: "bitsCoreINSPIRE";
+  background: black;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  color: white; 
+  padding: 10px;
+  font-weight: 350;
+  font-size: 30px;
+}
+
+.logo{
+  cursor: pointer;
+  color: red;
+}
+
+.list{
+  display: flex;
+  margin-left: 600px;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: center;
+  list-style: none;
+}
+
+.list li{
+  padding: 15px;
+  cursor:pointer;
+}
+
+.nav1{
+  color:red;
+}
+
+.nav2{
+  color:red;
+}
+
+.nav3{
+  color:red;
+}
+
+.nav4{
+  color:red;
+}
+
+.nav5{
+  color:red;
+}

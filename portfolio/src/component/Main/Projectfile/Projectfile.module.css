@@ -1,0 +1,104 @@
+
+.project{
+  font-family: "bitsCoreINSPIRE";
+  font-size: 30px;
+  color:black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 150vh;
+  background-color: #B8DE6F;
+  border-radius: 20px;
+  /* text-shadow: 4px 2px 2px white; */
+}
+
+.pjintro{
+  font-family: "bitsCorePRIDE";
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pjimg{
+  width: 100%;
+  height: 400px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pjimg img{
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperButtonNext {
+  cursor: pointer;
+  background-position: center;
+}
+
+.swiperButtonNext img{
+  height: 3rem;
+  padding-right: 1.5rem;
+}
+
+.swiperButtonPrev {
+  cursor: pointer;
+  background-position: center;
+  height: 50px;
+
+}
+
+.swiperButtonPrev img{
+  height: 3rem;
+  padding-left: 1.5rem;
+}
+
+.swiperButtonNext::after, .swiperButtonNrev::after {
+  display: none;
+}
+
+.project h1{
+  text-shadow: 2px 2px 2px white;
+}
+
+.pj1{
+  width: 70vw;
+  height: 110vh;
+  background: white;
+  color:black;
+  border-radius: 20px;
+  padding: 3rem;
+  margin:0 auto 2rem;
+  box-shadow: 1px 1px 20px 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pj2{
+  width: 70vw;
+  height: 110vh;
+  background: white;
+  color:black;
+  border-radius: 20px;
+  padding: 3rem;
+  margin:0 auto 2rem;
+  box-shadow: 1px 1px 20px 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+

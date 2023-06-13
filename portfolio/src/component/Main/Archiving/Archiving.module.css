@@ -1,0 +1,74 @@
+.archiving{
+  font-family: "bitsCoreINSPIRE";
+  width: 100%;
+  height: 600px;
+  background:#F1E189;
+  font-size: 30px;
+  display: flex;
+  flex-flow: column wrap; 
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.archiving h1{
+  text-shadow: 2px 2px 2px white;
+}
+.archivingList{
+  font-family: "bitsCorePRIDE";
+  display: flex;
+  font-size: 15px;
+  object-fit: cover;
+  text-align: start;
+}
+
+.archivingList img{
+  width: 15vw;
+ 
+}
+
+.archivingNote1{
+  width: 25vw;
+  height: 300px;
+  background: white;
+  color:black;
+  border-radius: 20px;
+  box-shadow: 1rem 1rem 1rem 0;
+  margin:0 auto 2rem;
+  box-shadow: 1rem 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+}
+
+
+.archivingNote2{
+  width: 25vw;
+  height: 280px;
+  background: white;
+  color:black;
+  border-radius: 20px;
+  box-shadow: 1rem 1rem 1rem 0;
+  margin:0 auto 2rem;
+  box-shadow: 1rem 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.archivingNote3{
+  width: 25vw;
+  height: 280px;
+  background: white;
+  color:black;
+  border-radius: 20px;
+  box-shadow: 1rem 1rem 1rem 0;
+  margin:0 auto 2rem;
+  box-shadow: 1rem 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+

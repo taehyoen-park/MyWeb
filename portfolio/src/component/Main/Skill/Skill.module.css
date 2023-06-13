@@ -1,0 +1,99 @@
+
+.skill{
+  font-family: "bitsCoreINSPIRE";
+  font-size: 30px;
+  color:black;
+  width: 100%;
+  height: 900px;
+  background:#01C5C4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+
+.skill h1{
+  text-shadow: 2px 2px 2px white;
+}
+
+
+.skill img{
+  width: 180px;
+  height:230px;
+} 
+
+.skills{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  color:black;
+  /* box-shadow: 1rem 1rem 1rem 0; */
+}
+
+
+.frontend{
+  width: 200px;
+  height: 80vh;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+   box-shadow: 1px 1px 20px 1px black;
+ 
+}
+
+
+.backend{
+  width: 200px;
+  height: 80vh;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+   box-shadow: 1px 1px 20px 1px black;
+}
+
+
+.MobileApp{
+  width: 200px;
+  height: 80vh;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+   box-shadow: 1px 1px 20px 1px black;
+}
+
+
+
+.VersionControl{
+  width: 200px;
+  height: 80vh;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+   box-shadow: 1px 1px 20px 1px black;
+}
+
+
+
+.Deployment{
+  width: 200px;
+  height: 80vh;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+   box-shadow: 1px 1px 20px 1px black;
+}
+
+
+
+.Certificate{
+  width: 200px;
+  height: 80vh;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 20px 1px black;
+
+}

@@ -1,0 +1,28 @@
+
+.career{
+  width: 100%;
+  height:1100px;
+  background:#F39233;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "bitsCoreINSPIRE";
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+.career h1{
+  text-shadow: 2px 2px 2px white;
+}
+.careerNote1{
+  width: 60vw;
+  height: 900px;
+  background: white;
+  color:black;
+  border-radius: 20px;
+  padding: 3rem;
+  margin:0 auto 2rem;
+  box-shadow: 0.5rem 0.5rem 15px 5px;
+}
+
