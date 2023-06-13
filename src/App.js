@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import styled from 'styled-components'
+import Login from './Login/Login'
+import Register from './Login/Register'
+import Chatroom from './chatroom/Chatroom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Background>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/Register' element={<Register/>}/>
+          <Route path='/Chatroom' element={<Chatroom/>}/>
+        </Routes>
+      </BrowserRouter>
+    </Background>
   );
 }
+
+const Background = styled.div`
+  overflow: hidden;
+  height: 100%;
+`
+
 
 export default App;
