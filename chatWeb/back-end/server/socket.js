@@ -1,11 +1,11 @@
 const sessionMiddleware = require('./session/sessionConfig');
 const sharedSession = require("express-socket.io-session");
+const cookieParser = require("cookie-parser");
 const mysql = require('mysql');
 let connectedUsers = [];
 let currentRooms = [];
 let roomMessages = {};
 let sessions = {};
-
 
 const saveMessage = (messageData) => {
     const connection = mysql.createConnection({
@@ -16,10 +16,8 @@ const saveMessage = (messageData) => {
         port:'3306'
     });
     connection.connect();
-
-    //const values = messageData.map(obj => [obj.room_id, obj.message, obj.from_id, obj.to_id, obj.date])
+    
     const val = messageData;
-    //console.log(values);
     const Query = "INSERT INTO singlelog (room_id, message, from_id, to_id, date) VALUES (?, ?, ?, ?, ?) ";
     connection.query(Query,
         [val.room_id,val.message,val.from_id,val.to_id,val.data],
@@ -28,7 +26,8 @@ const saveMessage = (messageData) => {
             if(error) throw error;
         });
 }
-module.exports = (server) => {
+
+module.exports = (server,app) => {
     const io = require('socket.io')(server, {
         cors: {
             origin: 'http://localhost:3000', // 클라이언트의 주소
@@ -37,6 +36,7 @@ module.exports = (server) => {
             credentials: true // 인증정보 (쿠키 등) 전송 여부
         }
     });
+    
     io.use(sharedSession(sessionMiddleware, { autoSave:true }));
 
 
@@ -49,11 +49,12 @@ module.exports = (server) => {
             session.user_name = user_name;
             session.user_id = user_id;
             session.socketId = socketId;
+            // const s = socket.request.session;
+            // console.log(session);
             const connectedUser = {
                 user_name: user_name,
                 user_id:user_id,
                 isOnline: true,
-                server_socketId: socket.id 
             };
 
             for(let i = 0; i < connectedUsers.length; i++)

@@ -15,7 +15,7 @@ import { BiMessageDetail } from "react-icons/bi"
 
 
 const socket = io('http://localhost:8000');
-  
+axios.defaults.withCredentials = true;
 function Chatroom()
 {
     const [users, setUsers] = useState([]);

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { login } from '../reducers/userAction'
 import axios from 'axios'
-
+axios.defaults.withCredentials = true;
 function Login(){
     const [userid, setUserId] = useState('');
     const [password, setPassword] = useState('');
@@ -24,6 +24,7 @@ function Login(){
     const handlelogin = async (e) => {
         e.preventDefault();
         try {
+            
             const response = await axios.post('http://localhost:8000', { userid, password});
             console.log(response.data.message);
             if(response.data.isSuccess){

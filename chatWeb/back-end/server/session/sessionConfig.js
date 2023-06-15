@@ -1,20 +1,34 @@
 const session = require('express-session');
-const memoryStore = require('memorystore')(session);
+const redis = require('redis');
+const dotenv= require('dotenv').config();;
+const RedisStore = require('connect-redis').default;
+
+const redisClient = redis.createClient({
+    port: 6379,
+    host: 'localhost',
+});
+
+redisClient.on('connect', () => {
+    console.log('Connected to Redis server');
+  });
+  
+redisClient.on('error', (error) => {
+    console.error('Redis connection error:', error);
+  });
+
+redisClient.connect().catch(console.error);
+const store = new RedisStore({ client: redisClient });
+
 const sessionMiddleware = session({
-    secret: 'pjb5289@',
-    resave: false,
-    saveUninitialized: true,
-    store: new memoryStore({
-        checkPeriod: 86400000, // 세션 데이터의 유효성을 체크하는 주기 (기본값: 24시간)
-      }),
-    cookie: {
-        path: '/',
-        maxAge: 24 * 6 * 60 * 10000,
-        sameSite: 'None',
-        httpOnly: false,
-        secure: true,
-    },
-    name:"yate",
+  secret: process.env.COOKIE_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  //store: store,
+  cookie: {
+    maxAge: 2628000000,
+    httpOnly: true,
+    secure: false,
+  },
 });
 
 module.exports = sessionMiddleware;
